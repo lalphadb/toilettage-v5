@@ -106,37 +106,6 @@ const Tarifs = () => (
         </div>
       </div>
 
-      {/* ── Avantages ── */}
-      <div style={{
-        background: '#fff',
-        border: '1px solid #e2e2e2',
-        borderRadius: '12px',
-        padding: '2rem 2.25rem',
-        marginBottom: '1.75rem',
-        display: 'flex',
-        flexWrap: 'wrap',
-        gap: '1.5rem 3rem',
-        alignItems: 'center',
-      }}>
-        <p style={{
-          fontSize: '10px', fontWeight: 600, letterSpacing: '0.15em',
-          textTransform: 'uppercase', color: '#bbb', margin: 0, flexShrink: 0,
-        }}>
-          Avantages
-        </p>
-        {[
-          '10 % — première visite',
-          'Annulation gratuite 24h avant',
-          '−10 % pour un 2e animal',
-          'Produits hypoallergéniques inclus',
-        ].map((item, i) => (
-          <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ width: '4px', height: '4px', borderRadius: '50%', background: '#ccc', flexShrink: 0 }} />
-            <span style={{ fontSize: '13px', color: '#555' }}>{item}</span>
-          </div>
-        ))}
-      </div>
-
       {/* ── Note bas ── */}
       <p style={{ fontSize: '12px', color: '#bbb', textAlign: 'center', margin: 0 }}>
         Un pelage très emmêlé ou négligé demande plus de travail — le tarif en tient compte.
