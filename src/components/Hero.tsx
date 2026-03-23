@@ -99,6 +99,13 @@ const Hero = () => (
       </div>
     </div>
 
+
+    {/* Vague de transition vers blanc */}
+    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, lineHeight: 0 }}>
+      <svg viewBox="0 0 1440 80" style={{ width: '100%', display: 'block' }} preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff" />
+      </svg>
+    </div>
   </section>
 )
 
