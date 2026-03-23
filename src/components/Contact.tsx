@@ -58,7 +58,7 @@ const Contact = () => {
     width: '100%', boxSizing: 'border-box',
     padding: '12px 14px',
     background: 'rgba(255,255,255,0.06)',
-    border: `1.5px solid ${touched[name] && errors[name] ? 'rgba(248,113,113,0.6)' : touched[name] && !errors[name] ? 'rgba(42,157,143,0.5)' : 'rgba(255,255,255,0.1)'}`,
+    border: `1.5px solid ${touched[name] && errors[name] ? 'rgba(248,113,113,0.6)' : touched[name] && !errors[name] ? 'rgba(43,88,116,0.6)' : 'rgba(255,255,255,0.1)'}`,
     borderRadius: 'var(--r-sm)',
     fontSize: '14px', color: 'var(--t-primary)',
     outline: 'none', transition: 'border-color var(--ease)',
@@ -205,7 +205,7 @@ const Contact = () => {
                       color: submitting ? 'var(--t-muted)' : 'var(--c-white)',
                       border: 'none', borderRadius: 'var(--r-md)', cursor: submitting ? 'not-allowed' : 'pointer',
                       fontSize: '14px', fontWeight: 600,
-                      boxShadow: submitting ? 'none' : '0 4px 12px rgba(42,157,143,0.3)',
+                      boxShadow: submitting ? 'none' : '0 4px 12px rgba(43,88,116,0.4)',
                     }}>
                       <Send size={14} />
                       {submitting ? 'Envoi en cours...' : 'Envoyer'}

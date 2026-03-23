@@ -139,7 +139,7 @@ const PolitiqueConfidentialite = () => {
           <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)', margin: '0 0 0.75rem' }}>
             Dernière mise à jour : {dateMAJ}
           </p>
-          <div style={{ background: 'rgba(42,157,143,0.08)', border: '1px solid rgba(42,157,143,0.2)', borderRadius: '8px', padding: '14px 18px' }}>
+          <div style={{ background: 'rgba(43,88,116,0.1)', border: '1px solid rgba(43,88,116,0.3)', borderRadius: '8px', padding: '14px 18px' }}>
             <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.65, margin: 0 }}>
               Cette politique est conforme à la <strong style={{ color: 'rgba(255,255,255,0.75)' }}>Loi 25</strong> (Loi modernisant des dispositions législatives en matière de protection des renseignements personnels, Québec) et à la <strong style={{ color: 'rgba(255,255,255,0.75)' }}>Loi sur la protection des renseignements personnels dans le secteur privé (LPRPSP)</strong>.
             </p>

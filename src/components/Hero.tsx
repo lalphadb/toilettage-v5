@@ -16,7 +16,7 @@ const Hero = () => (
     {/* Fond radial subtil */}
     <div style={{
       position: 'absolute', inset: 0, pointerEvents: 'none',
-      background: 'radial-gradient(ellipse at 70% 50%, rgba(42,157,143,0.08) 0%, transparent 65%)',
+      background: 'radial-gradient(ellipse at 70% 50%, rgba(43,88,116,0.08) 0%, transparent 65%)',
     }} />
 
     <div className="site-container" style={{ paddingTop: '7rem', paddingBottom: '6rem', position: 'relative', zIndex: 1 }}>
@@ -49,9 +49,9 @@ const Hero = () => (
               background: 'var(--c-teal)', color: 'var(--c-white)',
               fontSize: '15px', fontWeight: 600, letterSpacing: '0.01em',
               padding: '14px 28px', borderRadius: 'var(--r-md)',
-              textDecoration: 'none', boxShadow: '0 4px 16px rgba(42,157,143,0.35)',
+              textDecoration: 'none', boxShadow: '0 4px 16px rgba(43,88,116,0.45)',
             }}
-              onMouseEnter={e => { e.currentTarget.style.background = '#249182'; e.currentTarget.style.transform = 'translateY(-1px)' }}
+              onMouseEnter={e => { e.currentTarget.style.background = '#1e4d65'; e.currentTarget.style.transform = 'translateY(-1px)' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'var(--c-teal)'; e.currentTarget.style.transform = 'translateY(0)' }}
             >
               <Phone size={16} />
@@ -100,7 +100,7 @@ const Hero = () => (
             <div style={{
               position: 'absolute', inset: '-12px',
               borderRadius: '50%',
-              border: '2px solid rgba(42,157,143,0.2)',
+              border: '2px solid rgba(43,88,116,0.25)',
             }} />
             <img src={salonImg} alt="Salon Toilettage Des Lacs" style={{
               width: '100%', height: '100%',

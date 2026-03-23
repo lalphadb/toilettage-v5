@@ -95,7 +95,7 @@ const Header = () => {
             padding: '8px 16px', borderRadius: 'var(--r-md)',
             textDecoration: 'none',
           }}
-          onMouseEnter={e => (e.currentTarget.style.background = '#249182')}
+          onMouseEnter={e => (e.currentTarget.style.background = '#1e4d65')}
           onMouseLeave={e => (e.currentTarget.style.background = 'var(--c-teal)')}
         >
           <Phone size={13} /> Appeler
