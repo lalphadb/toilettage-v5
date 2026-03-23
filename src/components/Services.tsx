@@ -3,6 +3,8 @@ import img1 from '../assets/photos/new/chien_dans_bain.jpg'
 import img2 from '../assets/photos/new/coupe_chien.jpg'
 import img3 from '../assets/photos/new/chat3.jpg'
 import img4 from '../assets/photos/new/chien_pret.jpg'
+import img5 from '../assets/photos/new/coupe_griffe.png'
+import img6 from '../assets/photos/new/nettoyage_oreil.png'
 
 const services = [
   {
@@ -36,8 +38,8 @@ const services = [
 ]
 
 const miniServices = [
-  { titre: 'Coupe de griffes', detail: 'Taille précise avec limage des arêtes vives.', durée: '10 min' },
-  { titre: "Nettoyage d'oreilles", detail: 'Solution douce, inspection du conduit auditif.', durée: '10 min' },
+  { titre: 'Coupe de griffes', detail: 'Taille précise avec limage des arêtes vives.', durée: '10 min', img: img5, accent: '#2B5874' },
+  { titre: "Nettoyage d'oreilles", detail: 'Solution douce, inspection du conduit auditif.', durée: '10 min', img: img6, accent: '#1a3a4f' },
 ]
 
 const Services = () => (
@@ -136,34 +138,41 @@ const Services = () => (
         ))}
       </div>
 
-      {/* ── 2 mini-services en ligne ── */}
+      {/* ── 2 mini-services — même style que les cartes ── */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
         gap: '16px',
         marginBottom: '2.5rem',
       }}>
         {miniServices.map((s, i) => (
           <div key={i} style={{
-            background: 'var(--c-offwhite)',
-            border: '1px solid var(--c-border)',
+            position: 'relative',
             borderRadius: 'var(--r-lg)',
-            padding: '1.5rem 1.75rem',
-            display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem',
-          }}>
-            <div>
-              <h3 style={{ fontSize: '15px', fontWeight: 600, color: 'var(--tl-primary)', margin: '0 0 4px' }}>{s.titre}</h3>
-              <p style={{ fontSize: '13px', color: 'var(--tl-muted)', margin: 0, lineHeight: 1.5 }}>{s.detail}</p>
+            overflow: 'hidden',
+            background: s.accent,
+            aspectRatio: '5/3',
+            boxShadow: 'var(--shadow-md)',
+            transition: 'transform var(--ease)',
+          }}
+            onMouseEnter={e => (e.currentTarget.style.transform = 'translateY(-3px)')}
+            onMouseLeave={e => (e.currentTarget.style.transform = 'translateY(0)')}
+          >
+            <img loading="lazy" src={s.img} alt={s.titre} style={{
+              position: 'absolute', inset: 0, width: '100%', height: '100%',
+              objectFit: 'cover', transition: 'transform 0.5s ease',
+            }}
+              onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.05)')}
+              onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+            />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.15) 60%, transparent 100%)' }} />
+            <div style={{ position: 'absolute', top: '14px', right: '14px', background: 'rgba(255,255,255,0.15)', backdropFilter: 'blur(6px)', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '20px', padding: '4px 10px', display: 'flex', alignItems: 'center', gap: '5px' }}>
+              <Clock size={10} style={{ color: 'rgba(255,255,255,0.8)' }} />
+              <span style={{ fontSize: '11px', fontWeight: 500, color: 'rgba(255,255,255,0.9)', letterSpacing: '0.03em' }}>{s.durée}</span>
             </div>
-            <div style={{
-              flexShrink: 0,
-              display: 'flex', alignItems: 'center', gap: '5px',
-              background: 'rgba(43,88,116,0.08)',
-              borderRadius: '20px',
-              padding: '5px 12px',
-            }}>
-              <Clock size={11} style={{ color: 'var(--c-blue)' }} />
-              <span style={{ fontSize: '12px', fontWeight: 500, color: 'var(--c-blue)', whiteSpace: 'nowrap' }}>{s.durée}</span>
+            <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1.25rem' }}>
+              <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 700, color: '#fff', margin: '0 0 0.35rem', letterSpacing: '-0.01em' }}>{s.titre}</h3>
+              <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.7)', lineHeight: 1.5, margin: 0 }}>{s.detail}</p>
             </div>
           </div>
         ))}
