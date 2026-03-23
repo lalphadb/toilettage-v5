@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <header style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-      background: scrolled || menuOpen ? 'rgba(13,31,45,0.97)' : 'transparent',
+      background: scrolled || menuOpen ? 'rgba(43,88,116,0.97)' : 'transparent',
       backdropFilter: scrolled || menuOpen ? 'blur(12px)' : 'none',
       borderBottom: scrolled ? '1px solid rgba(255,255,255,0.06)' : 'none',
       transition: 'background 0.25s ease, border-color 0.25s ease, backdrop-filter 0.25s ease',
@@ -115,7 +115,7 @@ const Header = () => {
 
       {/* Menu mobile */}
       {menuOpen && (
-        <div style={{ background: 'rgba(13,31,45,0.98)', borderTop: '1px solid rgba(255,255,255,0.06)', padding: '1rem 0 1.5rem' }}>
+        <div style={{ background: 'rgba(43,88,116,0.98)', borderTop: '1px solid rgba(255,255,255,0.08)', padding: '1rem 0 1.5rem' }}>
           <div className="site-container" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
             {navLinks.map(l => (
               <Link key={l.href} to={l.href}
