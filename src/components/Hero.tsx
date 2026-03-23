@@ -74,19 +74,6 @@ const Hero = () => (
             </a>
           </div>
 
-          {/* Preuves de confiance sous les CTAs */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', marginTop: '2.5rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-            {[
-              { val: '10+', label: 'ans d\'expérience' },
-              { val: '5 ★', label: 'avis clients' },
-              { val: '100%', label: 'estimé gratuit' },
-            ].map((s, i) => (
-              <div key={i}>
-                <div style={{ fontSize: '20px', fontWeight: 700, fontFamily: 'var(--font-serif)', color: 'var(--c-white)' }}>{s.val}</div>
-                <div style={{ fontSize: '12px', color: 'var(--t-muted)', marginTop: '2px' }}>{s.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* ── Image ── */}
