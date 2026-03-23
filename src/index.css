@@ -1,0 +1,72 @@
+@import './design-tokens.css';
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #2d2d2d;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0em;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+::selection {
+  background: #2B5874;
+  color: #ffffff;
+}
+
+.site-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .site-container {
+    padding: 0 1.25rem;
+  }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #0d1f2d; }
+::-webkit-scrollbar-thumb { background: #2B5874; border-radius: 3px; }
+
+#contact select option {
+  background: #0d1f2d;
+  color: #ffffff;
+}
+
+/* ── Focus states visibles ── */
+:focus-visible {
+  outline: 2px solid var(--c-teal-light);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ── Transitions globales ── */
+a, button { transition: color var(--ease), background var(--ease), opacity var(--ease), transform var(--ease); }

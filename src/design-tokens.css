@@ -1,0 +1,50 @@
+/* ── Toilettage Des Lacs v5 — Design Tokens ── */
+:root {
+  /* Couleurs */
+  --c-navy:        #0d1f2d;
+  --c-navy-mid:    #1a3a4f;
+  --c-blue:        #2B5874;
+  --c-blue-hover:  #3a6d8f;
+  --c-teal:        #2A9D8F;
+  --c-teal-light:  #5bbfb5;
+  --c-white:       #ffffff;
+  --c-offwhite:    #f7f7f8;
+  --c-border:      #e8e8e8;
+
+  /* Texte sur fond sombre */
+  --t-primary:     rgba(255,255,255,0.90);
+  --t-secondary:   rgba(255,255,255,0.60);
+  --t-muted:       rgba(255,255,255,0.35);
+  --t-hint:        rgba(255,255,255,0.20);
+
+  /* Texte sur fond clair */
+  --tl-primary:    #111111;
+  --tl-secondary:  #555555;
+  --tl-muted:      #999999;
+
+  /* Espacements */
+  --sp-xs:  0.5rem;
+  --sp-sm:  1rem;
+  --sp-md:  1.75rem;
+  --sp-lg:  3rem;
+  --sp-xl:  5rem;
+  --sp-2xl: 7rem;
+
+  /* Rayons */
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  20px;
+
+  /* Ombres */
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
+
+  /* Typographie */
+  --font-body:  'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  /* Transitions */
+  --ease: 0.18s ease;
+}
