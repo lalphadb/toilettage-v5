@@ -99,12 +99,6 @@ const Hero = () => (
       </div>
     </div>
 
-    {/* Wave */}
-    <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0 }}>
-      <svg viewBox="0 0 1440 56" style={{ width: '100%', display: 'block' }} preserveAspectRatio="none">
-        <path d="M0,28 C480,56 960,0 1440,28 L1440,56 L0,56 Z" fill="#ffffff" />
-      </svg>
-    </div>
   </section>
 )
 
